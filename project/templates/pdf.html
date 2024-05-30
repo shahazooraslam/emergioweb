@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">UI UX</h1>
+    <!-- <a href="{%static 'assets/pdfs/UIUX (3).pdf' %}" download="UIUX (3).pdf">UI UX</a> -->
+    <!-- <a download href="UIUX.pdf">UI UX</a> -->
+    <embed src="{%static 'files/UIUX (3).pdf' %}#toolbar=0" height="500" width="700">
+        <a href="{%static 'files/UIUX (3).pdf' %}"download="UIUX (3).pdf">download</a>
+</body>
+</html>

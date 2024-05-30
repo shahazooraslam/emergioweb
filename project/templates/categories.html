@@ -1,0 +1,577 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Our Gallery</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Game Warrior Template">
+	<meta name="keywords" content="warrior, game, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i' %}" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+			<a class="site-logo" href="index.html">
+				<img src="{% static 'img/logo.png' %}" alt="">
+			</a>
+			<div class="user-panel">
+			{% if request.user.is_authenticated %}
+			    <a href="/logout/">logout</a>
+				{%else%} 
+				<a href="signin/">Login</a>  /  <a href="signup">Register</a>
+		    {%endif%}
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<!-- site menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/courses">Courses</a></li>
+					<li><a href="/career">Career</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Page info section -->
+	<section class="page-info-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}">
+		<div class="pi-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 text-white">
+						<h2>Our Team</h2>
+						<p>Meet the driving force behind our success—the diverse, passionate individuals who make up our team. Committed to excellence, innovation, and collaboration, our team brings expertise from various fields to create impactful solutions. Get to know the faces behind our collective dedication to delivering top-tier</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Page info section -->
+
+
+	<!-- Page section -->
+	<!-- {% comment %} <form action="{% url 'apply/' %}" method="post"> {% endcomment %}
+	{% comment %} {% csrf_token %} {% endcomment %} -->
+	<section class="page-section recent-game-page spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/career.jpg' %}">
+									<!-- {% comment %} <div class="cata new">Apply Now</div> {% endcomment %} -->
+									<!-- <button id="myButton" style="background-color: blue; color: white;  border: none; cursor: pointer;">Apply Now </button> -->
+                                    <button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>PPC Specialist</h5>
+									<p>We are hireing PPC Specialist with 2+ year experience... </p>
+									<!-- <a href="#" class="comment">3 Comments</a> -->
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/1a.jpg' %}">
+									<!-- <div class="cata racing">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>UIUX Developer </h5>
+									<p>We are hireing UIUX Developer with 2+ year experience... </p>
+									<!-- <a href="#" class="comment">3 Comments</a> -->
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/1a.jpg' %}">
+									<!-- <div class="cata adventure">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>UIUX Designer </h5>
+									<p>We are hireing UIUX Designer with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/career.jpg' %}">
+									<!-- <div class="cata new">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>Social Media Manager</h5>
+									<p>We are hireing Social Media Manager with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/career.jpg' %}">
+									<!-- <div class="cata racing">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>Python Developer </h5>
+									<p>We are hireing Python Developer with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/1a.jpg' %}">
+									<!-- <div class="cata adventure">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>Graphic Designer </h5>
+									<p>We are hireing Graphic Designer with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/1a.jpg' %}">
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>HR Executive</h5>
+									<p>We are hireing HR Executive with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/career.jpg' %}">
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>SEO Specialist</h5>
+									<p>We are hireing UIUX Developer with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/1a.jpg' %}">
+									<!-- <div class="cata adventure">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>Unity Game Developer </h5>
+									<p>We are hireing Unity Game Developer with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="recent-game-item">
+								<div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/career.jpg' %}">
+									<!-- <div class="cata new">Apply Now</div> -->
+									<button onclick="window.location.href='/apply/'">Apply Now</button>
+								</div>
+								<div class="rgi-content">
+									<h5>Game Artist</h5>
+									<p>We are hireing Game Artist with 2+ year experience...  </p>
+									<a href="#" class="comment">3 Comments</a>
+									<div class="rgi-extra">
+										<div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+										<div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					{% comment %} </form> {% endcomment %}
+					<!-- <div class="site-pagination">
+						<span class="active">01.</span>
+						<a href="#">02.</a>
+						<a href="#">03.</a>
+					</div> -->
+				</div>
+				<!-- sidebar -->
+				<div class="col-lg-4 col-md-7 sidebar pt-5 pt-lg-0">
+					<!-- widget -->
+					<div class="widget-item">
+						<form class="search-widget" method=POST action="{% url 'search-venues' %}">
+						 {% csrf_token %}
+							<input type="text" placeholder="Search" name="search">
+							<button><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+					<!-- widget -->
+					<div class="widget-item">
+						<h4 class="widget-title">Our Tutors</h4>
+						<div class="latest-blog">
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/1.jpeg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Game Development <br><span style="font-size: 14px; color: #ff205f" > Benin P John</span></div>
+									<p>Our game development tutors are industry veterans, passionate about gaming and equipped with vast experience. They provide personalized guidance, empowering you to master game creation from coding to design.</p>
+									<!-- <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button> -->
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/8.jpg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Digital Marketing <br><span style="font-size: 14px; color: #ff205f" > Abdul Basith</span></div>
+									<p>Our digital marketing tutors are industry experts immersed in the dynamic digital realm. They offer tailored guidance in social media, SEO, content creation, and analytics, empowering you for success.</p>
+									<!-- <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;" >Apply Now</a></button> -->
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/5.jpeg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Human Resource Management<br><span style="font-size: 14px; color: #ff205f" > Nisha Chandran</span></div>
+									<p>Our HRM tutors are seasoned professionals with expertise in recruitment, training, and compliance. They mentor and prepare you for effective people management within organizations.</p>
+									 {% comment %} <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;" >Apply Now</a></button>  {% endcomment %}
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/2.jpeg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">UIUX <br><span style="font-size: 14px; color: #ff205f" > Greeshma.M</span></div>
+									<p>Our UI/UX tutors are industry experts in crafting user-friendly digital experiences. They guide you through design principles and cutting-edge tools, empowering you to create intuitive interfaces</p>
+									<!-- <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button> -->
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/4.jpeg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Python <br><span style="font-size: 14px; color: #ff205f" > Nayana Mohan</span> </div>
+									<p>Our Python tutors are coding experts, diving into its versatility for web, data, AI, and automation. They provide hands-on training for mastering this powerful language.</p>
+									<!-- <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now </a></button> -->
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/6.jpeg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Game Artist <br><span style="font-size: 14px; color: #ff205f" > Vishnu MP</span> </div>
+									<p>Our game art tutors are visual storytelling experts. They guide you in character design, environments, and animation, empowering you to craft captivating game visuals.</p>
+									<!-- <button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button> -->
+								</div>
+							</div>
+							<!-- <div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/7.jpg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">HR Executive</div>
+									<p>We are hireing HR Executive with 2+ year experience...</p>
+									<button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/8.jpg' %}" style="border-radius: 50%;"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">SEO Specialist</div>
+									<p>We are hireing SEO Specialist with 2+ year experience...</p>
+									<button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/9.jpg' %}"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Unity Game Developer</div>
+									<p>We are hireing Unity Game Developer with 2+ year experience...</p>
+									<button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="{% static 'img/latest-blog/2.jpg' %}"></div>
+								<div class="lb-content">
+									<div class="lb-date" style="font-size: 20px;">Game Artist</div>
+									<p>We are hireing Game Art with 2+ year experience...</p>
+									<button style="background-color: #ff205f; border: none;"><a href="#" class="lb-author" style="color: white;">Apply Now</a></button>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<!-- widget -->
+					<!-- <div class="widget-item">
+						<h4 class="widget-title">Top Comments</h4>
+						<div class="top-comment">
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/1.jpg' %}"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span> Lorem consec ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/2.jpg' %}"></div>
+								<div class="tc-content">
+									<p><a href="#">Michael James</a> <span>on</span>Cras sit amet sapien aliquam</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/3.jpg' %}"></div>
+								<div class="tc-content">
+									<p><a href="#">Justin More</a> <span>on</span> Lorem ipsum dolor consecsit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<!-- widget -->
+					<!-- <div class="widget-item">
+						<div class="feature-item set-bg" data-setbg="{% static 'img/features/1.jpg' %}">
+							<span class="cata new">new</span>
+							<div class="fi-content text-white">
+								<h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+								<a href="#" class="fi-comment">3 Comments</a>
+							</div>
+						</div>
+					</div> -->
+					<!-- widget -->
+					<!-- <div class="widget-item">
+						<div class="review-item">
+							<div class="review-cover set-bg" data-setbg="{% static 'img/review/1.jpg' %}">
+								<div class="score yellow">9.3</div>
+							</div>
+							<div class="review-text">
+								<h5>Assasin’’s Creed</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Page section end -->
+
+
+	<!-- Footer top section -->
+	<footer
+	class="text-center text-lg-start text-white "
+	style="background-color: #413b3b"  
+	>
+<!-- Grid container -->
+<div class="container p-4 pb-0">
+<!-- Section: Links -->
+<section class="">
+  <!--Grid row-->
+  <div class="row">
+	<!-- Grid column -->
+	<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+	  <img src="{% static './img/logo.png' %}" alt="">
+	  <p>
+		We Develop the Best<br>
+		<br>
+		<br>
+		 Infra Futura, Seaport - Airport Rd, opp. Bharata Mata College, Thrikkakara, Kakkanad, Kochi, Kakkanad, Kerala 682039
+	  </p>
+	</div>
+	<!-- Grid column -->
+
+	<hr class="w-100 clearfix d-md-none" />
+
+	<!-- Grid column -->
+	<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+	  <h6 class="text-uppercase mb-4 font-weight-bold">Get In Touch</h6>
+
+	  <p>
+		<a class="text-white">Monday to Friday
+			<br>
+			9AM-7PM
+		</a>
+	  </p>
+	</div>
+	<!-- Grid column -->
+
+	<hr class="w-100 clearfix d-md-none" />
+
+	<!-- Grid column -->
+	<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+	  <h6 class="text-uppercase mb-4 font-weight-bold">
+		Quick Links
+	  </h6>
+	  <p>
+		<a class="text-white" href="index.html">Home</a>
+	  </p>
+	  <p>
+		<a class="text-white" href="review.html">Courses</a>
+	  </p>
+	  <p>
+		<a class="text-white" href="categories.html">Career</a>
+	  </p>
+	  <p>
+		<a class="text-white" href="contact.html">Contact</a>
+	  </p>
+	</div>
+
+	<!-- Grid column -->
+	<hr class="w-100 clearfix d-md-none" />
+
+	<!-- Grid column -->
+	<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+	  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+	  <p><i class="fa fa-home mr-3"></i>  Trans Asia Cyber Park,Infopark Phase 2, Infopark Sez, Phase II, Kochi, Kakkanad, Kerala 682303</p>
+	  <p><i class="fa fa-envelope mr-3"></i> hr@emergiotech.com</p>
+	  <p><i class="fa fa-phone mr-3"></i> +91 7594088816</p>
+	  <p><i class="fa fa-print mr-3"></i> +91 8891516767</p>
+	</div>
+	<!-- Grid column -->
+  </div>
+  <!--Grid row-->
+</section>
+<!-- Section: Links -->
+
+<hr class="my-3">
+
+<!-- Section: Copyright -->
+<section class="p-3 pt-0">
+  <div class="row d-flex align-items-center">
+	<!-- Grid column -->
+	<div class="col-md-7 col-lg-8 text-center text-md-start">
+	  <!-- Copyright -->
+	  <div class="p-3">
+		© 2023 Copyright:
+		<a class="text-white" href="#"
+		   >emergiotech.com</a
+		  >
+	  </div>
+	  <!-- Copyright -->
+	</div>
+	<!-- Grid column -->
+
+	<!-- Grid column -->
+	<div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+	  <!-- Facebook -->
+	  <a
+		 class="btn btn-outline-light btn-floating m-1"
+		 class="text-white"
+		 role="button" href="{% static 'https://www.facebook.com/emergiogames?mibextid=ZbWKwL' %}" target="_blank"
+		 ><i class="fa fa-facebook-f"></i
+		></a>
+
+	  <!-- linkdin -->
+	  <a
+		 class="btn btn-outline-light btn-floating m-1"
+		 class="text-white"
+		 role="button" href="{% static 'https://www.linkedin.com/company/emergiogames/' %}" target="_blank"
+		 ><i class="fa fa-linkedin"></i
+		></a>
+
+	  <!-- Google -->
+	  <a
+		 class="btn btn-outline-light btn-floating m-1"
+		 class="text-white"
+		 role="button" href="{% static 'https://www.google.com/search?q=emergio+games+pvt+ltd+kochi&rlz=1C1ZKTG_enIN904IN904&oq=e&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARBFGCcYOzISCAIQLhgnGK8BGMcBGIAEGIoFMgYIAxBFGDsyBggEEEUYQDIGCAUQRRg5Mg0IBhAAGIMBGLEDGIAEMg0IBxAAGIMBGLEDGIAE0gEJNzI5N2owajE1qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=12764878485428070386&scso=_WuxdZd7TOLn5seMP9e-kwAU_9:34.400001525878906' %}" target="_blank"
+		 ><i class="fa fa-google"></i
+		></a>
+
+	  <!-- Instagram -->
+	  <a
+		 class="btn btn-outline-light btn-floating m-1"
+		 class="text-white"
+		 role="button" href="{% static 'https://instagram.com/emergio_games?igshid=ODM2MWFjZDg=' %}" target="_blank"
+		 ><i class="fa fa-instagram"></i
+		></a>
+
+		<!-- watsapp -->
+
+		<a
+		 class="btn btn-outline-light btn-floating m-1"
+		 class="text-white"
+		 role="button" href="{% static 'https://wa.me/message/MUBIOQMLBKGRM1' %}" target="_blank"
+		 ><i class="fa fa-whatsapp"></i
+		></a>
+	</div>
+	<!-- Grid column -->
+  </div>
+</section>
+<!-- Section: Copyright -->
+</div>
+<!-- Grid container -->
+</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
